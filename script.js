@@ -1,7 +1,6 @@
 let board = document.querySelector(".board")
 let cells = document.querySelectorAll(".cell")
 let resetButton  = document.querySelector("#restartButton")
-
 let player = "PlayerOne"
 
 let WINNING_COMBINATIONS = [ 
@@ -41,24 +40,9 @@ const winning = [
 
 startGame ()
 
-// resetButton.addEventListener('click', startGame)
-
-// document.getElementById('resetButton').innerHTML= ""
-
-// function restartGame() {
-//   board.classList.remove(player)
-//   resetButton.addEventListener('click', startGame)
-//   cells.removeEventListener('click', handleClick)
-// }
-
-// document.querySelector('.resetButton').addEventListener("click", function(){
-//   handleClick();
-//   return false;
-// });
-
 function startGame () {
   cells.forEach ( cell => cell.addEventListener("click" , handleClick));
-  // resetButton.addEventListener("click", restartGame);
+  resetButton.addEventListener("click", restartGame);
   start = true 
 }
 
@@ -74,21 +58,9 @@ function changingUser () {
     player = (player == "PlayerOne") ? "PlayerTwo" : "PlayerOne"
 }
 
-
-
-// function check win
-
-// function end game
-
-// function restartGame() {
-//   board.innerHTML=""
-//   startGame()
-  // resetButton.style.display="none"
-//   board.classList.remove(player)
-//   resetButton.addEventListener('click', startGame)
-//   cells.removeEventListener('click', handleClick)
-// }
-
-// restartGame()
-
-// document.getElementById('resetButton').innerHTML= ""
+function restartGame () {
+cells.forEach(cell=> {
+  cell.classList.remove("PlayerOne")
+  cell.classList.remove("PlayerTwo")
+})
+}
