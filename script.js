@@ -48,14 +48,27 @@ function startGame () {
 
 function handleClick(event) {
   let userClick = event.target 
-  userClick.classList.add(player)
-  userClick.removeEventListener('click', handleClick)
-  changingUser ()
-  console.log(player)
+  // 
+
+  if (userClick.classList.length===1){
+    if (userClick.id >= 35){
+      userClick.classList.add(player)
+      changingUser () 
+    } else {
+      const order = document.getElementById(parseInt(userClick.id)+7).classList.length===2
+     if (order) {
+
+
+      userClick.classList.add(player)
+      changingUser () 
+     }
+    }
+  }
+
 }
 
 function changingUser () {
-    player = (player == "PlayerOne") ? "PlayerTwo" : "PlayerOne"
+  player = (player == "PlayerOne") ? "PlayerTwo" : "PlayerOne"
 }
 
 function restartGame () {
