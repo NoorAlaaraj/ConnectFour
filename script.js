@@ -41,25 +41,31 @@ const winning = [
 
 function startGame () {
   cells.forEach ( cell => cell.addEventListener("click" , handleClick));
-  resetButton.addEventListener("click", restartGame);
+  // resetButton.addEventListener("click", restartGame);
   start = true 
 }
 
 function handleClick(event) {
   let userClick = event.target 
   userClick.classList.add(player)
+  userClick.removeEventListener('click', handleClick)
   changingUser ()
+  console.log(player)
 }
 
 function changingUser () {
     player = (player == "PlayerOne") ? "PlayerTwo" : "PlayerOne"
 }
 
-function restartGame() {
+// function swapTurns() {
+//   PlayerOne = !PlayerOne
+// }
 
+function restartGame() {
 }
 
 startGame ()
+
 
 
 

@@ -1,8 +1,8 @@
-*, *::after, *::before {
+/* *, *::after, *::before {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-}
+} */
   
 html{
 background-image: url("./Friends.jpg");
@@ -35,7 +35,7 @@ h1 {
     background-color: rgb(0.5, 0.4, 0.3,0.1);
     margin-bottom: 5%;
 }
-   
+
 .PlayerOne { 
     background-color: darkgoldenrod
 }
