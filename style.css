@@ -77,9 +77,13 @@ h1 {
 } 
 
 .PlayerOne { 
-    background-color: darkgreen
+    /* background-color: darkgreen */
+   background-image: url("./Rachel.jpg");
+   background-size: 100%;
 }
 
 .PlayerTwo { 
-    background-color: orangered
+    /* background-color: orangered */
+    background-image: url("./Ross.jpg");
+    background-size: 100%;
 }
