@@ -39,6 +39,23 @@ const winning = [
   "", "", "", "", "", "", "",
 ];
 
+startGame ()
+
+// resetButton.addEventListener('click', startGame)
+
+// document.getElementById('resetButton').innerHTML= ""
+
+// function restartGame() {
+//   board.classList.remove(player)
+//   resetButton.addEventListener('click', startGame)
+//   cells.removeEventListener('click', handleClick)
+// }
+
+// document.querySelector('.resetButton').addEventListener("click", function(){
+//   handleClick();
+//   return false;
+// });
+
 function startGame () {
   cells.forEach ( cell => cell.addEventListener("click" , handleClick));
   // resetButton.addEventListener("click", restartGame);
@@ -57,15 +74,21 @@ function changingUser () {
     player = (player == "PlayerOne") ? "PlayerTwo" : "PlayerOne"
 }
 
-// function swapTurns() {
-//   PlayerOne = !PlayerOne
+
+
+// function check win
+
+// function end game
+
+// function restartGame() {
+//   board.innerHTML=""
+//   startGame()
+  // resetButton.style.display="none"
+//   board.classList.remove(player)
+//   resetButton.addEventListener('click', startGame)
+//   cells.removeEventListener('click', handleClick)
 // }
 
-function restartGame() {
-}
+// restartGame()
 
-startGame ()
-
-
-
-
+// document.getElementById('resetButton').innerHTML= ""
