@@ -22,6 +22,18 @@ h1 {
     -webkit-text-stroke: 3.3px;
 }
 
+.instructions {
+    text-align: left;
+    align-items: left;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:  rgb(245, 245, 245,0.5);
+    color: brown;
+    text-align: center;
+    -webkit-text-fill-color: rgba(253, 134, 36, 0.5)
+    -webkit-text-stroke: 1px;
+}
+
 .board{
     display: grid;
     grid-template-columns: repeat(7, 105px);
